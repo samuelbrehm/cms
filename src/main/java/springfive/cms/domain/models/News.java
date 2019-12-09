@@ -22,7 +22,7 @@ public class News {
         .anyMatch(review -> reviewer.id.equals(review.userId) && "approved".equals(review.status)));
   }
 
-  public Review review(String userId,String status){
+  public Review review(String userId,String status) {
     final Review review = new Review(userId, status);
     this.reviewers.add(review);
     return review;
